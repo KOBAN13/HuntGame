@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D639510A-B7C0-C64D-F6AD-66CC4ECACC64}</ProjectGuid>
+    <ProjectGuid>{8E25D284-4A72-A33F-43D4-6D6C5ABFC0A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -823,11 +823,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}</Project>
+      <Project>{135CB43F-57BF-42A8-22DB-FBBEEC09C2F9}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Polyperfect.Universal.csproj">
-      <Project>{23A7817E-0C5F-EFD1-A7E7-39A085096C53}</Project>
+      <Project>{639BFC59-C4AC-1B39-8625-4AD3EADFFDED}</Project>
       <Name>Polyperfect.Universal</Name>
     </ProjectReference>
   </ItemGroup>

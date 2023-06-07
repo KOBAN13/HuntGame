@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{23A7817E-0C5F-EFD1-A7E7-39A085096C53}</ProjectGuid>
+    <ProjectGuid>{639BFC59-C4AC-1B39-8625-4AD3EADFFDED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Polyperfect.Universal</AssemblyName>
