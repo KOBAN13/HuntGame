@@ -10,5 +10,9 @@ namespace Assets.Scripts
     {
         public void Reload();
         public void Shoot();
+
+        public void Update();
+
+        public void Start();
     }
 }

@@ -6,7 +6,6 @@ namespace Assets.Scripts
     {
        [SerializeField] private float _speed = 10.0f;
        [SerializeField] private float _gravity = -9.8f;
-       [SerializeField] private float _hp = 100;
        [SerializeField] private CharacterController characterController;
 
 
