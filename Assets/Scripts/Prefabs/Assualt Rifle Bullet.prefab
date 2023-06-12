@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5253122492524299848}
   - component: {fileID: 5253122492524299850}
   - component: {fileID: -499949453640425753}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Assualt Rifle Bullet
   m_TagString: bullets
   m_Icon: {fileID: 0}
@@ -131,5 +131,5 @@ MonoBehaviour:
   _ammoDamage: 100
   _tagList:
   - Enemy
-  _ammoSpeed: 10
+  _ammoSpeed: 100
   hPObject: {fileID: 0}

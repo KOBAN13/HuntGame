@@ -1,10 +1,5 @@
 ﻿using Assets.Scripts;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class AR : Weapons, IWeapon
@@ -39,39 +34,67 @@ public class AR : Weapons, IWeapon
         }
         Vector3 bulletDistanse = targetHit - shootPoint.position; //дистанция от точки вылета пули до цели
         Vector3 newBulletDistanse = bulletDistanse + new Vector3(0f, 0f, 0f);// новое направление пули
-        GameObject newBullet = Instantiate(prefabBullets, shootPoint.position, Quaternion.identity); //эта строчка созхдает новый обьект пули из префаба, создается в точке выстрела
-                                                                                                     //и последний аргумент использеться для получения ориентации от родительского обьекта
-        newBullet.transform.forward = newBulletDistanse.normalized; //эта строка устанавливает направелние обьекта новой пули в направлении newBulletDistance
+        GameObject newBullet = Instantiate(prefabBullets, shootPoint.position, Quaternion.Euler(Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0)); //эта строчка созхдает новый обьект пули из префаба, создается в точке выстрела
+                                                                                                                                                       //и последний аргумент использеться для получения ориентации от родительского обьекта
+        newBullet.transform.forward = newBulletDistanse.normalized ;     //эта строка устанавливает направелние обьекта новой пули в направлении newBulletDistance
         newBullet.GetComponent<Rigidbody>().AddForce(bulletDistanse.normalized * bullets._ammoSpeed, ForceMode.Impulse); //получение компонента риджитбади из пули и добавление к нему метода
                                                                                                                          //которые добавляет различные свойства
         ammoInMagazine--; //вычитане пули из магазина
-        fireTimer = 0.0f;
     }
 
     public void Start()
     {
-        //получение анимации
+        animWeapon = GetComponent<Animator>();
         ammoInMagazine = tempAmmo;
         cam = GameObject.FindWithTag("camWeapon").GetComponent<Camera>();
         bullets = GameObject.FindWithTag("bullets").GetComponent<ARBullet>();
+        particleShoot = GameObject.FindWithTag("particalShoot").GetComponent<ParticleSystem>();
     }
 
     public void Update()
     {
+        ShootindMode();
         if (Input.GetKey(KeyCode.R))
         {
             if (totalAmmo > 0 && !isReloading)
+            {
+                TriggerAnimationsReload();
                 StartCoroutine(Wait());
+            }
         }
-        if (Input.GetButtonDown("Fire1"))
+        if(Input.GetButton("Fire1") && !shootingMode)
+        {
+             time += Time.deltaTime;
+             if (ammoInMagazine > 0)
+             {
+                if(time > 1 / (rateOfFire / 60))
+                {
+                    Shoot();
+                    animWeapon.SetTrigger("Shoot");
+                    particleShoot.Play();
+                    time = 0;
+                }
+             }
+            else if (totalAmmo > 0 && !isReloading)
+            {
+                TriggerAnimationsReload();
+                StartCoroutine(Wait());
+            }
+        }
+        if(shootingMode && Input.GetButtonDown("Fire1"))
         {
             if (ammoInMagazine > 0)
+            {
                 Shoot();
+                animWeapon.SetTrigger("Shoot1");
+                particleShoot.Play();
+            }
             else if (totalAmmo > 0 && !isReloading)
+            {
+                TriggerAnimationsReload();
                 StartCoroutine(Wait());
+            }
         }
-        if (fireTimer < rateOfFire)
-            fireTimer += Time.deltaTime;
     }
 
     private IEnumerator Wait()
@@ -82,5 +105,24 @@ public class AR : Weapons, IWeapon
 
         isReloading = false;
         Reload();
+    }
+
+    private void TriggerAnimationsReload()
+    {
+        animWeapon.SetTrigger("Reloading");
+        animWeapon.SetTrigger("Reloading1");
+    }
+
+    private bool ShootindMode()
+    {
+        if(Input.GetKey(KeyCode.B))
+        {
+            shootingMode = false;
+        }
+        if(Input.GetKey(KeyCode.V))
+        {
+            shootingMode = true;
+        }
+        return shootingMode;
     }
 }

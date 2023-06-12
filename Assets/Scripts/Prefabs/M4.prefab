@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4176686810818503007}
   - component: {fileID: 422347509835466588}
-  - component: {fileID: -6835294064763117782}
+  - component: {fileID: 8615114918116668526}
+  - component: {fileID: -6119351151129580178}
   m_Layer: 0
   m_Name: M4
   m_TagString: Untagged
@@ -51,7 +52,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-6835294064763117782
+--- !u!114 &8615114918116668526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,13 +67,33 @@ MonoBehaviour:
   ammoInMagazine: 30
   tempAmmo: 30
   totalAmmo: 180
-  rateOfFire: 0.1
   shootPoint: {fileID: 8570576718250416651}
-  cam: {fileID: 0}
+  cam: {fileID: 845237872649408385}
   prefabBullets: {fileID: 4911103662401239837, guid: 96adc08074141cd439e2a5b3ae7402f7,
     type: 3}
   reloadTime: 5
-  _ammoSpeed: 0
+  bullets: {fileID: 0}
+  rateOfFire: 600
+--- !u!95 &-6119351151129580178
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038106866692397934}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 646cce6ccdcaaec408a23113176dea62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8016671365942239951
 GameObject:
   m_ObjectHideFlags: 0
