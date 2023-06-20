@@ -56,28 +56,28 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHumanoid\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\WeaponManager.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\ObjectHealth.cs" />
-    <Compile Include="Assets\Scripts\ARBullet.cs" />
-    <Compile Include="Assets\Scripts\Jump.cs" />
-    <Compile Include="Assets\Scripts\Recoil.cs" />
-    <Compile Include="Assets\Scripts\Bullets.cs" />
-    <Compile Include="Assets\Scripts\Invoker.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\ARBullet.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Recoil.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Bullets.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHumanoid\Invoker.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHumanoid\Player.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PistolBullets.cs" />
-    <Compile Include="Assets\Scripts\Weapons.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\PistolBullets.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Weapons.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\WeaponShooter.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\CamController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\HPObject.cs" />
-    <Compile Include="Assets\Scripts\AR.cs" />
-    <Compile Include="Assets\Scripts\IWeapon.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHumanoid\HPObject.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\AR.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\WeaponPickUp.cs" />
-    <Compile Include="Assets\Scripts\SwapArWeapon.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHumanoid\SwapArWeapon.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\BulletProjectile.cs" />
-    <Compile Include="Assets\Scripts\WeaponSwitch.cs" />
+    <Compile Include="Assets\Scripts\ScriptsHumanoid\WeaponSwitch.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\ISwap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />
