@@ -9,13 +9,18 @@ public class Weapons : MonoBehaviour
     [SerializeField] protected Camera cam;
     [SerializeField] protected GameObject prefabBullets;
     [SerializeField] protected float reloadTime;
-    [SerializeField] protected Bullets bullets;
     [SerializeField] protected float rateOfFire;
+    [SerializeField] protected Transform spawnMagazine;
+    [SerializeField] protected GameObject prefabMagazine;
     protected bool shootingMode;
     protected float time;
     protected bool isReloading;
     protected Animator animWeapon;
     protected ParticleSystem particleShoot;
+    protected bool isShoot = true;
+    protected Bullets bullets;
+    [SerializeField] protected Recoil recoil;
+    protected WeaponSwitch weaponSwap;
     protected int TempAmmo
     {
         set { tempAmmo = ammoInMagazine; }

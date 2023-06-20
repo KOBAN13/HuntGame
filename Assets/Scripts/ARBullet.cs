@@ -8,6 +8,6 @@ public class ARBullet : Bullets
 {
     public void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 10f);
     }
 }

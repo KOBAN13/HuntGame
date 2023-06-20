@@ -1,24 +1,62 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
 {
     public class Player : MonoBehaviour
     {
-       [SerializeField] private float _speed = 10.0f;
-       [SerializeField] private float _gravity = -9.8f;
-       [SerializeField] private CharacterController characterController;
+        [SerializeField] private float _speed;
+        [SerializeField] private float _gravity;
+        [SerializeField] private CharacterController characterController;
+        [SerializeField] private Rigidbody rigidbodyPlayer;
+        [SerializeField] private float jumpForse;
+        [SerializeField] private float groundDistanse;
+        [SerializeField] LayerMask groundMask;
+        private Vector3 move = Vector3.zero;
+        private bool isGrounded = true;
 
 
         private void Awake()
         {
-            characterController.GetComponent<CharacterController>();
+            characterController = rigidbodyPlayer.GetComponent<CharacterController>();
+            rigidbodyPlayer.GetComponent<Rigidbody>();
         }
         private void Update()
         {
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
-            Vector3 move = transform.right * x + transform.forward * z;
-            characterController.Move(move * _speed * Time.deltaTime);
+            PlayerMove();
+        }
+
+        private void Jump()
+        {
+            if (Input.GetButton("Jump"))
+            {
+                move.y = jumpForse;
+            }
+        }
+
+        private bool CheckGround()
+        {
+            RaycastHit raycastHit;
+            if (Physics.Raycast(transform.position, Vector3.down, out raycastHit, groundDistanse, groundMask))
+                isGrounded = true;
+            else
+                isGrounded = false;
+            return isGrounded;
+        }
+
+        private void PlayerMove()
+        {
+            if (CheckGround())
+            {
+                float x = Input.GetAxis("Horizontal");
+                float z = Input.GetAxis("Vertical");
+                move = new Vector3(x, 0, z);
+                move = transform.TransformDirection(move);
+                move *= _speed;
+                Jump();
+            }
+            move.y -= _gravity * Time.deltaTime;
+            characterController.Move(move * Time.deltaTime);
         }
     }
 }

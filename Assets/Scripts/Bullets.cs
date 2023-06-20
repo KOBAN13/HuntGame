@@ -13,7 +13,7 @@ public class Bullets : MonoBehaviour
     {
         if(CheckTag(collision.gameObject))
         {
-            Debug.Log("hit persona");
+            Debug.Log("hit persona AMOGUS");
             hPObject = collision.transform.GetComponent<HPObject>();
             hPObject.CheckDestroy(_ammoDamage);
             Destroy(gameObject);

@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29b6cb3358fb6f458ba779b136a4641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoDamage: 100
+  _ammoDamage: 10
   _tagList:
   - Enemy
-  _ammoSpeed: 100
+  _ammoSpeed: 10
   hPObject: {fileID: 0}
