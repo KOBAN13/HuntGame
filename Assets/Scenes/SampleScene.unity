@@ -55503,6 +55503,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1957917555}
     m_Modifications:
+    - target: {fileID: 291695634732304984, guid: 27970213075487843a773c15f5da1631,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.14
+      objectReference: {fileID: 0}
     - target: {fileID: 4749726120100289773, guid: 27970213075487843a773c15f5da1631,
         type: 3}
       propertyPath: m_RootOrder
@@ -55562,6 +55567,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: karabinier-98k
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601081528363520215, guid: 27970213075487843a773c15f5da1631,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601081528363520215, guid: 27970213075487843a773c15f5da1631,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601081528363520215, guid: 27970213075487843a773c15f5da1631,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0429
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27970213075487843a773c15f5da1631, type: 3}
