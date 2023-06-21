@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\ScriptsHumanoid\Invoker.cs" />
     <Compile Include="Assets\Scripts\ScriptsHumanoid\Player.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\ISwap.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\PistolBullets.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Weapons.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\WeaponShooter.cs" />
@@ -77,7 +78,6 @@
     <Compile Include="Assets\Scripts\ScriptsHumanoid\SwapArWeapon.cs" />
     <Compile Include="Assets\Scripts\Prefabs\Prefabs\Weapons\Scripts\BulletProjectile.cs" />
     <Compile Include="Assets\Scripts\ScriptsHumanoid\WeaponSwitch.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\ISwap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />
