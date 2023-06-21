@@ -13,10 +13,15 @@ namespace Weapon
 
         public void OnCollisionEnter(Collision collision)
         {
-            if (CheckTag(collision.gameObject))
+            GetDamage(collision.gameObject);
+        }
+
+        protected void GetDamage(GameObject gameObj)
+        {
+            if (CheckTag(gameObj))
             {
                 Debug.Log("hit persona AMOGUS");
-                hPObject = collision.transform.GetComponent<HPObject>();
+                hPObject = gameObj.transform.GetComponent<HPObject>();
                 hPObject.CheckDestroy(_ammoDamage);
                 Destroy(gameObject);
             }
