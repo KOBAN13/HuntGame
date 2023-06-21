@@ -11,6 +11,9 @@ TagManager:
   - ARRecoil
   - WeaponHolder
   - particalShoot
+  - rifle
+  - item
+  - Item
   layers:
   - Default
   - TransparentFX

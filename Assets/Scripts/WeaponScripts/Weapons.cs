@@ -6,7 +6,7 @@ namespace Weapon
     {
         [SerializeField] protected int ammoInMagazine;
         [SerializeField] protected int tempAmmo;
-        [SerializeField] protected int totalAmmo;
+        [SerializeField] public int totalAmmo; //переделать
         [SerializeField] protected Transform shootPoint;
         [SerializeField] protected Camera cam;
         [SerializeField] protected GameObject prefabBullets;
