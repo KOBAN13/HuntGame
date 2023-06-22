@@ -28,7 +28,7 @@ public class Interaction : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         item.Interaction();
-                        weaponAR.t += 180;
+                        weaponAR.totalAmmo += 180;
                     }
                 }
             }
