@@ -38,20 +38,9 @@ namespace Weapon
             }
             Vector3 bulletDistanse = targetHit - shootPoint.position; //дистанция от точки вылета пули до цели
             Vector3 newBulletDistanse = bulletDistanse + new Vector3(0f, 0f, 0f);// новое направление пули
-            GameObject newBullet = Instantiate(prefabBullets, shootPoint.position, Quaternion.identity); //эта строчка созхдает новый обьект пули из префаба, создается в точке выстрела
-                                                                                                         //и последний аргумент использеться для получения ориентации от родительского обьекта
-
-
-            Vector3 direction = Quaternion.Euler(Random.Range(-1f, 1f), Random.Range(1f, -1f), Random.Range(1f, -1f)) * newBulletDistanse.normalized;
-            newBullet.transform.forward = direction.normalized;     //эта строка устанавливает направелние обьекта новой пули в направлении newBulletDistance
-            newBullet.GetComponent<Rigidbody>().AddForce(direction * bullets._ammoSpeed, ForceMode.Impulse); //получение компонента риджитбади из пули и добавление к нему метода
-                                                                                                             //которые добавляет различные свойства
-
-
-            GameObject newSleeve = Instantiate(prefabSleeve, spawnSleeve.position , spawnSleeve.rotation);
-            Vector3 forseSleepy = spawnSleeve.right * 1f + spawnSleeve.up * Random.Range(0,1f);
-            newSleeve.GetComponent<Rigidbody>().AddForce(forseSleepy * 3f, ForceMode.Impulse);
-            newSleeve.GetComponent<Rigidbody>().AddTorque(Random.insideUnitSphere * 3f);
+            
+            CreateNewBullets(newBulletDistanse);
+            CreateNewSleepy();
 
             recoil.ShootRecoil(); //отдача
             ammoInMagazine--; //вычитане пули из магазина
@@ -62,7 +51,7 @@ namespace Weapon
             animWeapon = GetComponent<Animator>();
             ammoInMagazine = tempAmmo;
             weaponSwap = GetComponent<WeaponSwitch>();
-            bullets = GameObject.FindWithTag("bullets").GetComponent<ARBullet>();
+            bullets = GameObject.FindWithTag("bullets").GetComponent<ARBullet>(); //исключить теги из кода
         }
 
         public void Update()
@@ -136,10 +125,26 @@ namespace Weapon
         private void DropMagazine() //ивент по выпаданию магазина из оружия
         {
             GameObject magazine = Instantiate(prefabMagazine, spawnMagazine.position, spawnMagazine.rotation);
-            Rigidbody prefabMagazin = magazine.GetComponent<Rigidbody>();
-            prefabMagazin.AddForce(spawnMagazine.forward * 1f, ForceMode.Impulse);
+            magazine.GetComponent<Rigidbody>().AddForce(spawnMagazine.forward, ForceMode.Impulse);
         }
 
+        private void CreateNewSleepy()
+        {
+            GameObject newSleeve = Instantiate(prefabSleeve, spawnSleeve.position , spawnSleeve.rotation);
+            Vector3 forseSleepy = spawnSleeve.right * 1f + spawnSleeve.up * Random.Range(0,1f);
+            newSleeve.GetComponent<Rigidbody>().AddForce(forseSleepy * 3f, ForceMode.Impulse);
+            newSleeve.GetComponent<Rigidbody>().AddTorque(Random.insideUnitSphere * 3f);
+        }
+
+        private void CreateNewBullets(Vector3 newBulletDistanse)
+        {
+            GameObject newBullet = Instantiate(prefabBullets, shootPoint.position, Quaternion.identity); //эта строчка созхдает новый обьект пули из префаба, создается в точке выстрела
+            Vector3 direction = Quaternion.Euler(Random.Range(-1f, 1f), Random.Range(1f, -1f), Random.Range(1f, -1f)) * newBulletDistanse.normalized;
+            newBullet.transform.forward = direction.normalized;     //эта строка устанавливает направелние обьекта новой пули в направлении newBulletDistance
+            newBullet.GetComponent<Rigidbody>().AddForce(direction * bullets._ammoSpeed, ForceMode.Impulse); //получение компонента риджитбади из пули и добавление к нему метода
+            //которые добавляет различные свойства
+        }
+        
         private void TriggerAnimationsReload()
         {
             animWeapon.SetTrigger("Reloading");

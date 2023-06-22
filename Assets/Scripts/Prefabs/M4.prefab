@@ -533,6 +533,8 @@ MonoBehaviour:
   spawnMagazine: {fileID: 8746181493159061046}
   prefabMagazine: {fileID: 8494753993991946404, guid: 4ce61597981f2f94e982f08d3a036342,
     type: 3}
+  prefabSleeve: {fileID: 0}
+  spawnSleeve: {fileID: 0}
   recoil: {fileID: 0}
 --- !u!95 &1648223448317729857
 Animator:
@@ -682,7 +684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8934449820662415603}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0.06, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

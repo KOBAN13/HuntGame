@@ -11,9 +11,7 @@ namespace Humanoid
         [SerializeField] private float _maxUp;
         [SerializeField] private float _maxDown;
         [SerializeField] private float _xRotation;
-
-
-
+        
         private void Update()
         {
             GetAxis();
