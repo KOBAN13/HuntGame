@@ -14,6 +14,8 @@ namespace Weapon
         [SerializeField] protected float rateOfFire;
         [SerializeField] protected Transform spawnMagazine;
         [SerializeField] protected GameObject prefabMagazine;
+        [SerializeField] protected GameObject prefabSleeve;
+        [SerializeField] protected Transform spawnSleeve;
         protected bool shootingMode;
         protected float time;
         protected bool isReloading;

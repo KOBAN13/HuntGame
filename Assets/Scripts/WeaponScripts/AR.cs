@@ -16,6 +16,7 @@ namespace Weapon
             ammoInMagazine = tempAmmo;
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public void Shoot()
         {
             if (ammoInMagazine <= 0)
@@ -46,6 +47,12 @@ namespace Weapon
             newBullet.GetComponent<Rigidbody>().AddForce(direction * bullets._ammoSpeed, ForceMode.Impulse); //получение компонента риджитбади из пули и добавление к нему метода
                                                                                                              //которые добавляет различные свойства
 
+
+            GameObject newSleeve = Instantiate(prefabSleeve, spawnSleeve.position , spawnSleeve.rotation);
+            Vector3 forseSleepy = spawnSleeve.right * 1f + spawnSleeve.up * Random.Range(0,1f);
+            newSleeve.GetComponent<Rigidbody>().AddForce(forseSleepy * 3f, ForceMode.Impulse);
+            newSleeve.GetComponent<Rigidbody>().AddTorque(Random.insideUnitSphere * 3f);
+
             recoil.ShootRecoil(); //отдача
             ammoInMagazine--; //вычитане пули из магазина
         }
@@ -69,8 +76,8 @@ namespace Weapon
                 }
                 if (Input.GetButton("Fire1") && !shootingMode)
                 {
-                    string animation = "Shoot";
-                    float delayShoot = 1 / (rateOfFire / 60);
+                    var animation = "Shoot";
+                    var delayShoot = 1 / (rateOfFire / 60);
                     ShootAnyModes(delayShoot, animation);
                     recoil.ShakeCamera();
                 }
