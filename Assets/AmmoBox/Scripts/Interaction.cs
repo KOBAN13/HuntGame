@@ -28,11 +28,11 @@ public class Interaction : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         item.Interaction();
-//<<<<<<< Updated upstream
+
                         weaponAR.totalAmmo += 180;
-//=======
+
                       // weaponAR.totalAmmo += 180;
-//>>>>>>> Stashed changes
+
                     }
                 }
             }
