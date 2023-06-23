@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8494753993988988068}
   - component: {fileID: 8494753993989955172}
   - component: {fileID: 3227378788767570944}
-  - component: {fileID: 7305297639981952426}
+  - component: {fileID: -182724419917383937}
   m_Layer: 0
   m_Name: Mag
   m_TagString: Untagged
@@ -101,7 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7305297639981952426
+--- !u!65 &-182724419917383937
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
