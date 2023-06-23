@@ -15,7 +15,7 @@ C:/Users/500DX/OneDrive/Documents/GitHub/Hunt-Dev2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60730
+51260
 Successfully changed project path to: C:/Users/500DX/OneDrive/Documents/GitHub/Hunt-Dev2
 C:/Users/500DX/OneDrive/Documents/GitHub/Hunt-Dev2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/500DX/OneDrive/Documents/GitHub/Hunt-Dev2
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 108.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 110.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,90 +63,90 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56160
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56660
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006731 seconds.
+Registered in 0.006038 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 109.42 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 111.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.594 seconds
+- Completed reload, in  0.624 seconds
 Domain Reload Profiling:
-	ReloadAssembly (595ms)
-		BeginReloadAssembly (64ms)
+	ReloadAssembly (624ms)
+		BeginReloadAssembly (79ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (431ms)
-			LoadAssemblies (62ms)
+		EndReloadAssembly (447ms)
+			LoadAssemblies (77ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (93ms)
+			SetupTypeCache (100ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (267ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (281ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (109ms)
+				RefreshPlugins (111ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (113ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
+				ProcessInitializeOnLoadAttributes (116ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004345 seconds.
+Registered in 0.003853 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\500DX\OneDrive\Documents\GitHub\Hunt-Dev2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\500DX\OneDrive\Documents\GitHub\Hunt-Dev2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 Package Manager log level set to [2]
-- Completed reload, in  0.979 seconds
+- Completed reload, in  1.052 seconds
 Domain Reload Profiling:
-	ReloadAssembly (979ms)
-		BeginReloadAssembly (102ms)
+	ReloadAssembly (1053ms)
+		BeginReloadAssembly (109ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (780ms)
-			LoadAssemblies (73ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (829ms)
+			LoadAssemblies (82ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (173ms)
-			ReleaseScriptCaches (0ms)
+			SetupTypeCache (206ms)
+			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (458ms)
+			SetupLoadedEditorAssemblies (466ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (359ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (354ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.99 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3227 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 37 unused Assets / (56.4 KB). Loaded Objects now: 3706.
 Memory consumption went from 142.2 MB to 142.2 MB.
-Total: 2.344500 ms (FindLiveObjects: 0.202700 ms CreateObjectMapping: 0.158500 ms MarkObjects: 1.919700 ms  DeleteObjects: 0.063000 ms)
+Total: 2.784900 ms (FindLiveObjects: 0.281600 ms CreateObjectMapping: 0.258000 ms MarkObjects: 2.168000 ms  DeleteObjects: 0.076600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -160,19 +160,191 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2499.218408 seconds.
-  path: Assets/Tree_Textures/diffuse.png
-  artifactKey: Guid(72765ef2e86d78c46a72e49382e9baf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree_Textures/diffuse.png using Guid(72765ef2e86d78c46a72e49382e9baf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a652c19ef696159f332897f54d24a680') in 0.075767 seconds 
+  Time since last request: 2833.638961 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Sports/ball-volleyball.fbx
+  artifactKey: Guid(916612b941590c7429deaf48e47f4046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Sports/ball-volleyball.fbx using Guid(916612b941590c7429deaf48e47f4046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f12166da24fb3dbf7f91dbec50412d2') in 0.127400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Survival/barrell-explosive-fire-open.fbx
+  artifactKey: Guid(b22fb76aa35cb5b4da8251b4b432ef62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Survival/barrell-explosive-fire-open.fbx using Guid(b22fb76aa35cb5b4da8251b4b432ef62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d73b88ac00817327bc29bb78c38a260') in 0.045119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Easter/basket-eggs-b-easter.fbx
+  artifactKey: Guid(01179df135d24414eb8c8162c2eba862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Easter/basket-eggs-b-easter.fbx using Guid(01179df135d24414eb8c8162c2eba862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '848da7afacfd6fb119eacdcf17181f91') in 0.014562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Low poly characters/Low Poly Survival Characters/Meshes/Weapons/9mm Pistol & 9mm Magazine.fbx
+  artifactKey: Guid(2106c3674ff428a43993192836cb4dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low poly characters/Low Poly Survival Characters/Meshes/Weapons/9mm Pistol & 9mm Magazine.fbx using Guid(2106c3674ff428a43993192836cb4dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0531c8c80f6f3e2070983b209700196c') in 0.056830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-logo-tied-farm.fbx
+  artifactKey: Guid(76c5219acfaa9074daf61b64acf5b9e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-logo-tied-farm.fbx using Guid(76c5219acfaa9074daf61b64acf5b9e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972977da0ab57583ac841b511e13ff1f') in 0.020342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Valentine/bag-gift-valentine-a.fbx
+  artifactKey: Guid(6439012bf8679d247b70f5c113dfd26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Valentine/bag-gift-valentine-a.fbx using Guid(6439012bf8679d247b70f5c113dfd26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0dedada4c1af99b9c760dd6e65564c') in 0.019332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-logo-lying-spilled-a-farm.fbx
+  artifactKey: Guid(bde0478c221b47c46a9af63a160e4560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-logo-lying-spilled-a-farm.fbx using Guid(bde0478c221b47c46a9af63a160e4560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0688faabee4874e7f71f34c05169dc7b') in 0.016168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Attachments/att-optic-holographic-sight.fbx
+  artifactKey: Guid(96a088c61a3cbc0439b2de8337a8bee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Attachments/att-optic-holographic-sight.fbx using Guid(96a088c61a3cbc0439b2de8337a8bee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd6fb23c7a31dbd0da0cb71eb0a7301a') in 0.011756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/awp.fbx
+  artifactKey: Guid(0077b8c172284b74db44a04c9645a6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/awp.fbx using Guid(0077b8c172284b74db44a04c9645a6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fe45d2359e12f6a76665d8a12fde4f1') in 0.066770 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000015 seconds.
-  path: Assets/Tree_Textures/translucency_gloss.png
-  artifactKey: Guid(7e4ff2275c89fd441ae45e8b042caba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree_Textures/translucency_gloss.png using Guid(7e4ff2275c89fd441ae45e8b042caba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '222e7a3456c833e9185353333350fc41') in 0.021036 seconds 
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Tools/axe-fireman.fbx
+  artifactKey: Guid(86fc960bb7ed5ee4faacd82002ae2c8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Tools/axe-fireman.fbx using Guid(86fc960bb7ed5ee4faacd82002ae2c8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db2fedb57fab95f0670508b19598233') in 0.009515 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.315755 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(a302cbf8d7bdce54cb125cd62e047a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(a302cbf8d7bdce54cb125cd62e047a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3355c66dec50dad9912c75e0280d277') in 0.001014 seconds 
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-soil-standing-farm.fbx
+  artifactKey: Guid(4d58a025467487c43830be7e59f1dc01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-soil-standing-farm.fbx using Guid(4d58a025467487c43830be7e59f1dc01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9d82b2280bdf52261899983e530a58f') in 0.011523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Sports/ball-baseball.fbx
+  artifactKey: Guid(a5db8be9b7dc8bc46b95144ed556a89a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Sports/ball-baseball.fbx using Guid(a5db8be9b7dc8bc46b95144ed556a89a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d8bf76fd5666692bebd0610c942037d') in 0.010133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Low poly characters/Low Poly Survival Characters/Meshes/Character Models/Alex.fbx
+  artifactKey: Guid(c2c3809587a5c0f4e8935cf97a5fc121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low poly characters/Low Poly Survival Characters/Meshes/Character Models/Alex.fbx using Guid(c2c3809587a5c0f4e8935cf97a5fc121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42585baf789a8af1a984d6fac9173021') in 0.030786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Sports/ball-socker.fbx
+  artifactKey: Guid(5a0c86f13d1c7e1419117027fc53fd07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Sports/ball-socker.fbx using Guid(5a0c86f13d1c7e1419117027fc53fd07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc8a087e910f01c542e28018dc89c208') in 0.014059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/barrel-stand-3m-empty.fbx
+  artifactKey: Guid(0c59f8edbdc01a34a954f46616775bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/barrel-stand-3m-empty.fbx using Guid(0c59f8edbdc01a34a954f46616775bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08226a51b46b11d36776d04d4d068284') in 0.012047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/barrel-stand-2m-double.fbx
+  artifactKey: Guid(a69cca8e5de87ec4797a5305054a6da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/barrel-stand-2m-double.fbx using Guid(a69cca8e5de87ec4797a5305054a6da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3532d9670686d3516ddb760578221e18') in 0.012465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Ammo/ammo-m79-grenade-airburst.fbx
+  artifactKey: Guid(2428c136d7184c742ac5fd58a3050536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Ammo/ammo-m79-grenade-airburst.fbx using Guid(2428c136d7184c742ac5fd58a3050536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40bbcd4206e5af9ecdad1b27944a5820') in 0.011024 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Attachments/att-silencer-a.fbx
+  artifactKey: Guid(b4203aa807e11e348b19e751af3a3ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Attachments/att-silencer-a.fbx using Guid(b4203aa807e11e348b19e751af3a3ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8b0e9175a13993b108f1a3396df91c1') in 0.010507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Christmas/bag-gift-christmas-b.fbx
+  artifactKey: Guid(58ff19c9750f1cf4a8925f0b0fc0831c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Christmas/bag-gift-christmas-b.fbx using Guid(58ff19c9750f1cf4a8925f0b0fc0831c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1e9449deefd6e68814b37d9b5bebece') in 0.011073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Polygon-Lite Survival Collection/Models/Bandage.fbx
+  artifactKey: Guid(69de5cf452d7f1643814adf0febb69f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polygon-Lite Survival Collection/Models/Bandage.fbx using Guid(69de5cf452d7f1643814adf0febb69f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5399c9ef80a09c71be7240d4200f229b') in 0.011688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Survival/barrell-explosive-triangle-closed.fbx
+  artifactKey: Guid(09f0753f9a6484644aabda2358132b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Survival/barrell-explosive-triangle-closed.fbx using Guid(09f0753f9a6484644aabda2358132b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3070763965f367ec601ef4a3894c5d7d') in 0.011927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Low poly characters/Low Poly Survival Characters/Meshes/Accessories/Backpack02.fbx
+  artifactKey: Guid(dcf21fd80ee53c643ac23b8565e4d6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low poly characters/Low Poly Survival Characters/Meshes/Accessories/Backpack02.fbx using Guid(dcf21fd80ee53c643ac23b8565e4d6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aca06fe33defc374691eb07949ba4d2c') in 0.015807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Ammo/ammo-rocket-rpg.fbx
+  artifactKey: Guid(966c87d09082c904195fbac9f5f66f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Ammo/ammo-rocket-rpg.fbx using Guid(966c87d09082c904195fbac9f5f66f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f74a788649d5f1ead70a4d48f815f90') in 0.010943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Attachments/att-silencer-b.fbx
+  artifactKey: Guid(e31d1d926a800ef46a6f3c5f1ec77f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Guns/Attachments/att-silencer-b.fbx using Guid(e31d1d926a800ef46a6f3c5f1ec77f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b329ce85e5948dfe541eef651724fe99') in 0.011177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-lying-full-a-farm.fbx
+  artifactKey: Guid(ed51453513947d4419c3429ff0471278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/bag-lying-full-a-farm.fbx using Guid(ed51453513947d4419c3429ff0471278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1b80b71043de1ce4b18bc818fef695f') in 0.011364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/barrel-tap.fbx
+  artifactKey: Guid(377e58a1e4063804bbe5180ad53af911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/barrel-tap.fbx using Guid(377e58a1e4063804bbe5180ad53af911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff33f1a045e23845d21c024ef6128279') in 0.010919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Low poly characters/Low Poly Survival Characters/Meshes/Accessories/Backpack01.fbx
+  artifactKey: Guid(d1241d72c90ad0c4b86e1bb4d254af39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low poly characters/Low Poly Survival Characters/Meshes/Accessories/Backpack01.fbx using Guid(d1241d72c90ad0c4b86e1bb4d254af39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a3ff391754e6db721a7535997bdda54') in 0.015188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Low poly characters/Low Poly Survival Characters/Meshes/Character Models/Anthony.fbx
+  artifactKey: Guid(14db89dc570237c4190614c93f860db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low poly characters/Low Poly Survival Characters/Meshes/Character Models/Anthony.fbx using Guid(14db89dc570237c4190614c93f860db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69725c194319365c1fa6546cab8b67fa') in 0.023810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/basket-e-farm.fbx
+  artifactKey: Guid(0fca413906a8de1419b9c67e36727eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Farm/basket-e-farm.fbx using Guid(0fca413906a8de1419b9c67e36727eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21a803b427d3cc926f506ffdfc725b77') in 0.010956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Low poly characters/Low Poly Survival Characters/Meshes/Colliders/Axe_Collider.fbx
+  artifactKey: Guid(45768c4950628b84098bf0704a11afd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low poly characters/Low Poly Survival Characters/Meshes/Colliders/Axe_Collider.fbx using Guid(45768c4950628b84098bf0704a11afd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be1b9ae486353dba06f7c3125595ec3e') in 0.011655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/polyperfect/Poly Universal Pack/- Meshes/Survival/backpack-open.fbx
+  artifactKey: Guid(05394557354974d43be2caa5d4d3c636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Poly Universal Pack/- Meshes/Survival/backpack-open.fbx using Guid(05394557354974d43be2caa5d4d3c636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2467ffe91fb2045cd3abdaa69526cb49') in 0.010736 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
