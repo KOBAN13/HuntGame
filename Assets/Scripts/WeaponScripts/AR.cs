@@ -5,6 +5,7 @@ namespace Weapon
 {
     public class AR : Weapons, IWeapon
     {
+        private GameObject _newMagazine;
         public void Reload()
         {
             if (totalAmmo <= 0)
@@ -38,7 +39,9 @@ namespace Weapon
             }
             Vector3 bulletDistanse = targetHit - shootPoint.position; //дистанция от точки вылета пули до цели
             Vector3 newBulletDistanse = bulletDistanse + new Vector3(0f, 0f, 0f);// новое направление пули
-            
+
+            GameObject newBullet;
+            GameObject newSleepy;
             CreateNewBullets(newBulletDistanse);
             CreateNewSleepy();
 
@@ -143,6 +146,11 @@ namespace Weapon
             newBullet.transform.forward = direction.normalized;     //эта строка устанавливает направелние обьекта новой пули в направлении newBulletDistance
             newBullet.GetComponent<Rigidbody>().AddForce(direction * bullets._ammoSpeed, ForceMode.Impulse); //получение компонента риджитбади из пули и добавление к нему метода
             //которые добавляет различные свойства
+        }
+
+        private void CreateNewCloneObject(GameObject newObject, GameObject prefab, Transform transformObj)
+        {
+            newObject = Instantiate(newObject, transformObj.position, transformObj.rotation); 
         }
         
         private void TriggerAnimationsReload()
