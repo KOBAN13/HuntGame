@@ -16,7 +16,6 @@ namespace Weapon
             ammoInMagazine = tempAmmo;
         }
 
-        // ReSharper disable Unity.PerformanceAnalysis
         public void Shoot()
         {
             if (ammoInMagazine <= 0)
@@ -38,9 +37,17 @@ namespace Weapon
             }
             Vector3 bulletDistanse = targetHit - shootPoint.position; //дистанция от точки вылета пули до цели
             Vector3 newBulletDistanse = bulletDistanse + new Vector3(0f, 0f, 0f);// новое направление пули
-            
+
             CreateNewBullets(newBulletDistanse);
             CreateNewSleepy();
+            GameObject newBullet = Instantiate(prefabBullets, shootPoint.position, Quaternion.identity); //эта строчка созхдает новый обьект пули из префаба, создается в точке выстрела
+                                                                                                         //и последний аргумент использеться для получения ориентации от родительского обьекта
+
+
+            Vector3 direction = Quaternion.Euler(Random.Range(-1f, 1f), Random.Range(1f, -1f), Random.Range(1f, -1f)) * newBulletDistanse.normalized;
+            newBullet.transform.forward = direction.normalized;     //эта строка устанавливает направелние обьекта новой пули в направлении newBulletDistance
+            newBullet.GetComponent<Rigidbody>().AddForce(direction * bullets._ammoSpeed, ForceMode.Impulse); //получение компонента риджитбади из пули и добавление к нему метода
+                                                                                                             //которые добавляет различные свойства
 
             recoil.ShootRecoil(); //отдача
             ammoInMagazine--; //вычитане пули из магазина
@@ -65,8 +72,8 @@ namespace Weapon
                 }
                 if (Input.GetButton("Fire1") && !shootingMode)
                 {
-                    var animation = "Shoot";
-                    var delayShoot = 1 / (rateOfFire / 60);
+                    string animation = "Shoot";
+                    float delayShoot = 1 / (rateOfFire / 60);
                     ShootAnyModes(delayShoot, animation);
                     recoil.ShakeCamera();
                 }
