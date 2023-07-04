@@ -17,7 +17,7 @@ namespace Weapon
         {
             //тут будет код
         }
-        public void ShakeCamera()
+        public void Update()
         {
             // все за€в€зано на интерпол€ции надо с ней разобратьс€
             targetRotations = Vector3.Lerp(targetRotations, Vector3.zero, returnSpeed * Time.deltaTime); // эта строчка нужна чтоб мы плавно после отдачи возвратащлись в 

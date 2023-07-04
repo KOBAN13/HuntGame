@@ -118,8 +118,17 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:ODIN_INSPECTOR
+-define:ODIN_INSPECTOR_3
+-define:ODIN_INSPECTOR_3_1
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll"
+-r:"Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll"
+-r:"Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll"
+-r:"Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll"
+-r:"Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll"
+-r:"Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -323,7 +332,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
--r:"C:/Users/500DX/OneDrive/Documents/GitHub/Hunt-Dev2/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Z:/GitHub/Hunt-Dev/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Polyperfect.Universal.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AdaptivePerformance.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AdaptivePerformance.Profiler.Editor.ref.dll"
@@ -374,14 +383,18 @@
 "Assets/Scripts/ScriptsHumanoid/HPObject.cs"
 "Assets/Scripts/ScriptsHumanoid/Invoker.cs"
 "Assets/Scripts/ScriptsHumanoid/Player.cs"
-"Assets/Scripts/ScriptsHumanoid/SwapArWeapon.cs"
+"Assets/Scripts/ScriptsHumanoid/PlayerCombat.cs"
+"Assets/Scripts/ScriptsHumanoid/SwapWeapons.cs"
 "Assets/Scripts/ScriptsHumanoid/WeaponSwitch.cs"
 "Assets/Scripts/WeaponScripts/AR.cs"
-"Assets/Scripts/WeaponScripts/ARBullet.cs"
 "Assets/Scripts/WeaponScripts/Bullets.cs"
-"Assets/Scripts/WeaponScripts/PistolBullets.cs"
+"Assets/Scripts/WeaponScripts/BulletsInfo.cs"
+"Assets/Scripts/WeaponScripts/ControlerVisual.cs"
+"Assets/Scripts/WeaponScripts/EventManager.cs"
+"Assets/Scripts/WeaponScripts/Pistols.cs"
 "Assets/Scripts/WeaponScripts/Recoil.cs"
 "Assets/Scripts/WeaponScripts/Weapons.cs"
+"Assets/Scripts/WeaponScripts/WeaponsInfo.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

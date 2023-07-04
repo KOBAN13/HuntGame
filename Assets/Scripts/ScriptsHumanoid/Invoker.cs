@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Humanoid
+namespace ScriptsHumanoid
 {
     public class Invoker : MonoBehaviour
     {

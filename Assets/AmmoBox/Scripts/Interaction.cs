@@ -1,42 +1,27 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using Weapon;
 
 public class Interaction : MonoBehaviour
 {
-    public TextMeshProUGUI indicator;
-    public Camera cameraPeson;
+    [SerializeField] private TextMeshProUGUI indicator;
+    [SerializeField] private Camera cameraPeson;
     [SerializeField] private AR weaponAR;
-    private void Start()
+    
+    
+    public void OpenAndCloseAmmoBox()
     {
-        cameraPeson.GetComponent<Camera>();
-        weaponAR = GetComponent<AR>();
-    }
-    void Update()
-    {
-        RaycastHit hit;
-        Ray ray = cameraPeson.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        if (Physics.Raycast(ray, out hit))
+        var ray = cameraPeson.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        if (Physics.Raycast(ray, out var hit))
         {
-            if (hit.transform.name == "Object005") 
+            if (hit.collider.TryGetComponent<Item>(out var box)) 
             {
-                Item item = hit.collider.GetComponent<Item>();
-                if (item != null)
+                indicator.enabled = true;
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    indicator.enabled = true;
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        item.Interaction();
-                        weaponAR.totalAmmo += 180;
-
-                    }
+                    box.Interaction();
                 }
             }
-            else
-            {
-                indicator.enabled = false;
-            } 
         }
         else
         {

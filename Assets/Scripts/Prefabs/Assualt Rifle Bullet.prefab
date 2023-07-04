@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6856522294028933832}
   - component: {fileID: 5253122492524299848}
   - component: {fileID: 5253122492524299850}
-  - component: {fileID: -499949453640425753}
+  - component: {fileID: 3516668186362194759}
   m_Layer: 6
   m_Name: Assualt Rifle Bullet
   m_TagString: bullets
@@ -101,7 +101,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &5253122492524299850
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9082687198232781867, guid: 8bc3384605743ae45870cbd9e8d0ad3e, type: 3}
---- !u!114 &-499949453640425753
+--- !u!114 &3516668186362194759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,11 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4911103662401239837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29b6cb3358fb6f458ba779b136a4641, type: 3}
+  m_Script: {fileID: 11500000, guid: 32e6e4dc7005ee147b8b74a18c1025e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoDamage: 10
-  _tagList:
-  - Enemy
-  _ammoSpeed: 10
-  hPObject: {fileID: 0}
+  bullet: {fileID: 11400000, guid: 5679652761a0db3489fcc4e0386b0383, type: 2}

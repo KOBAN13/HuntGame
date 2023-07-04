@@ -1,41 +1,26 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Weapon
 {
     public class Bullets : MonoBehaviour
     {
-        [SerializeField] public int _ammoDamage;
-        [SerializeField] public string[] _tagList;
-        [SerializeField] public int _ammoSpeed;
-        public HPObject hPObject;
-
+        [SerializeField] private BulletsInfo bullet;
         public void OnCollisionEnter(Collision collision)
         {
-            GetDamage(collision.gameObject);
-        }
-
-        protected void GetDamage(GameObject gameObj)
-        {
-            if (CheckTag(gameObj))
+            if (collision.gameObject.TryGetComponent<HPObject>(out var hpObject))
             {
-                Debug.Log("hit persona AMOGUS");
-                hPObject = gameObj.transform.GetComponent<HPObject>();
-                hPObject.CheckDestroy(_ammoDamage);
+                hpObject.CheckDestroy(bullet.AmmoDamage);
                 Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
 
-        public bool CheckTag(GameObject obj)
+        public void Start()
         {
-            foreach (var tag in _tagList)
-            {
-                if (obj.tag == tag)
-                    return true;
-            }
-            return false;
+            Destroy(gameObject, 10f);
         }
     }
 }

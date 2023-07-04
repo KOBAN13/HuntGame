@@ -13,7 +13,6 @@ public class Item : MonoBehaviour
 
     public void Interaction()
     {
-       
         if (type == ItemType.Box)
         {
             flag = !flag;

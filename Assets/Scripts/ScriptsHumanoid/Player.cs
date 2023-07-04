@@ -11,20 +11,21 @@ namespace Humanoid
         [SerializeField] private float jumpForse;
         [SerializeField] private float groundDistanse;
         [SerializeField] LayerMask groundMask;
-        private Vector3 move = Vector3.zero;
-        private bool isGrounded = true;
-
-
+        [SerializeField] private Interaction _interactionAmmoBox;
+        private Vector3 _move = Vector3.zero;
+        private bool _isGrounded = true;
+        
         private void Update()
         {
             PlayerMove();
+            _interactionAmmoBox.OpenAndCloseAmmoBox();
         }
 
         private void Jump()
         {
             if (Input.GetButton("Jump"))
             {
-                move.y = jumpForse;
+                _move.y = jumpForse;
             }
         }
 
@@ -32,10 +33,10 @@ namespace Humanoid
         {
             RaycastHit raycastHit;
             if (Physics.Raycast(transform.position, Vector3.down, out raycastHit, groundDistanse, groundMask))
-                isGrounded = true;
+                _isGrounded = true;
             else
-                isGrounded = false;
-            return isGrounded;
+                _isGrounded = false;
+            return _isGrounded;
         }
 
         private void PlayerMove()
@@ -44,13 +45,13 @@ namespace Humanoid
             {
                 float x = Input.GetAxis("Horizontal");
                 float z = Input.GetAxis("Vertical");
-                move = new Vector3(x, 0, z);
-                move = transform.TransformDirection(move);
-                move *= _speed;
+                _move = new Vector3(x, 0, z);
+                _move = transform.TransformDirection(_move);
+                _move *= _speed;
                 Jump();
             }
-            move.y -= _gravity * Time.deltaTime;
-            characterController.Move(move * Time.deltaTime);
+            _move.y -= _gravity * Time.deltaTime;
+            characterController.Move(_move * Time.deltaTime);
         }
     }
 }

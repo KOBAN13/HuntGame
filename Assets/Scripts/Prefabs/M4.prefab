@@ -38,6 +38,7 @@ Transform:
   - {fileID: 76721385147556488}
   - {fileID: 3906038736307548593}
   - {fileID: 7144720920251370093}
+  - {fileID: 8072850018583032158}
   m_Father: {fileID: 4176686810818503007}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -435,7 +436,6 @@ GameObject:
   - component: {fileID: 422347509835466588}
   - component: {fileID: 8615114918116668526}
   - component: {fileID: 1648223448317729857}
-  - component: {fileID: 4280305466916261006}
   - component: {fileID: 4152972867900845891}
   - component: {fileID: 7988119917687836782}
   m_Layer: 0
@@ -496,13 +496,17 @@ MonoBehaviour:
   cam: {fileID: 845237872649408385}
   prefabBullets: {fileID: 4911103662401239837, guid: 96adc08074141cd439e2a5b3ae7402f7,
     type: 3}
-  reloadTime: 5
+  reloadTime: 3.8
   rateOfFire: 600
   spawnMagazine: {fileID: 8746181493159061046}
   prefabMagazine: {fileID: 8494753993991946404, guid: 4ce61597981f2f94e982f08d3a036342,
     type: 3}
-  prefabSleeve: {fileID: 0}
-  spawnSleeve: {fileID: 0}
+  prefabSleeve: {fileID: 6980622871862708375, guid: 42e070bf04978444798670175feb72b8,
+    type: 3}
+  spawnSleeve: {fileID: 8072850018583032158}
+  bullets: {fileID: 0}
+  _launchForceSleepy: 3
+  _torsionForceSleepy: 3
   recoil: {fileID: 0}
 --- !u!95 &1648223448317729857
 Animator:
@@ -524,18 +528,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4280305466916261006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3038106866692397934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6271077b9f186b848bb5403aeff138e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4152972867900845891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,9 +552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e5b881f34b070428bc2f74f47f3afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapon: {fileID: 0}
-  _weaponHolder: {fileID: 0}
-  _weaponMove: {fileID: 0}
+  weapon: {fileID: 0}
+  weaponHolder: {fileID: 0}
+  weaponMove: {fileID: 0}
+  switchesWeapon:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4365989007281934314
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +588,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 76721385147556480}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6688978022299432900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8072850018583032158}
+  m_Layer: 0
+  m_Name: SpawnSleppy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8072850018583032158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688978022299432900}
+  m_LocalRotation: {x: 0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.0272, y: 0.0623, z: 0.1164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 76721385147556480}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7002372467358032965
 GameObject:

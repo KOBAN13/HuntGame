@@ -1,55 +1,83 @@
 using UnityEngine;
-using Humanoid;
+using Weapon;
 
-public class WeaponSwitch : MonoBehaviour
+namespace ScriptsHumanoid
 {
-    private Invoker _invoker;
-    private SwapArWeapon _swapArWeapon;
-    [SerializeField] private Transform _weapon;
-    [SerializeField] private Transform _weaponHolder;
-    [SerializeField] private Transform _weaponMove;
-    public bool isEquipped { get; private set; }
-    private void Start()
+    public class WeaponSwitch : MonoBehaviour
     {
-        _invoker = GetComponent<Invoker>();
-        _swapArWeapon = GetComponent<SwapArWeapon>();
-    }
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        private Invoker _invoker;
+        private SwapWeapons _swapWeapon;
+        [SerializeField] private Transform weapon;
+        [SerializeField] private AR arWeapon;
+        [SerializeField] private Pistols pistols;
+        [SerializeField] private Transform weaponHolder;
+        [SerializeField] private Transform weaponMove;
+        [SerializeField] private WeaponSwitch[] switchesWeapon;
+        private bool _isPistolEquipped;
+        private bool _isAREquipped;
+        
+        public bool IsPistolEquipped => _isPistolEquipped;
+        public bool IsAREquipped => _isAREquipped;
+
+        public bool IsEquipped { get; private set; }
+        private void Start()
         {
-            SwapAr();
-            isEquipped = true;
+            _invoker = GetComponent<Invoker>();
+            _swapWeapon = GetComponent<SwapWeapons>();
         }
-        if(Input.GetKeyUp(KeyCode.X))
+        private void Update()
         {
-            AwayAr();
-            isEquipped = false;
+            switch (Input.inputString)
+            {
+                case "1" :
+                    ChangeWeapons(ref _isPistolEquipped, ref _isAREquipped, 0);
+                    ChooseWeapon(0, ref _isAREquipped);
+                    arWeapon.CHE(arWeapon);
+                    break;
+                case "2" :
+                    ChangeWeapons(ref _isAREquipped, ref _isPistolEquipped, 1);
+                    ChooseWeapon(1, ref _isPistolEquipped);
+                    pistols.CHE(pistols);
+                    break;
+                case "x": AwayWeapon();
+                    break;
+                case "ч": AwayWeapon();
+                    break;
+            }
         }
-    }
+        private void SwapWeapon()
+        {
+            _invoker.SetCommand(_swapWeapon);
+            _invoker.SwapWeapon(weaponMove, weapon);
+            
+        }
 
-    private void SwapAr()
-    {
-        _invoker.SetCommand(_swapArWeapon);
-        _invoker.SwapWeapon(_weaponMove, _weapon);
-    }
+        private void AwayWeapon()
+        {
+            _invoker.SetCommand(_swapWeapon);
+            _invoker.AwayWeapon(weaponHolder, weapon);
+            IsEquipped = false;
+        }
 
-    private void AwayAr()
-    {
-        _invoker.SetCommand(_swapArWeapon);
-        _invoker.AwayWeapon(_weaponHolder, _weapon);
-    }
-}
+        private void ChooseWeapon(int index, ref bool switchWeapon)
+        {
+            if (!IsEquipped)
+            {
+                switchesWeapon[index].SwapWeapon();
+                IsEquipped = true;
 
-public class SwapPistol : ISwap
-{
-    public void AwayWeapon(Transform _weaponMove, Transform _weaponHolder)
-    {
-        throw new System.NotImplementedException();
-    }
+                switchWeapon = true;
+            }
+        }
 
-    public void SwapWeapon(Transform _weaponMove, Transform _weaponHolder)
-    {
-        throw new System.NotImplementedException();
+        private void ChangeWeapons(ref bool weaponEquip, ref bool switchWeapon, int index)
+        {
+            if (weaponEquip)
+            {
+                AwayWeapon();
+                ChooseWeapon(index, ref switchWeapon);
+                weaponEquip = false;
+            }
+        }
     }
 }
