@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769dedb5bf6ad794b8203a27f9f07dbc, type: 3}
+  m_Name: WeaponPistol
+  m_EditorClassIdentifier: 
+  ammoInMagazine: 12
+  tempAmmo: 12
+  totalAmmo: 2147483315
+  prefabBullet: {fileID: 6185784039838125207, guid: 1df1b6b883fa5134684180e8d773e6c8,
+    type: 3}
+  reloadTime: 5
+  rateOfFire: 6000
+  prefabMagazine: {fileID: 1648221824126595567, guid: acb67af8f24689240961ef8334251863,
+    type: 3}
+  prefabSleeve: {fileID: 8198230725075994128, guid: 49932e38f49d1d044ac35063341957db,
+    type: 3}
+  bullets: {fileID: 11400000, guid: 86cddb0c378876041b1a36853fb1d04e, type: 2}
+  launchForceSleepy: 2
+  torsionForceSleepy: 2

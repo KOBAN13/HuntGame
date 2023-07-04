@@ -1,0 +1,2 @@
+Z:\GitHub\Hunt-Dev\obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache
+Z:\GitHub\Hunt-Dev\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
